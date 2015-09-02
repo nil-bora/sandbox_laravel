@@ -1,0 +1,10 @@
+<div class="span3" id="sidebar">
+    <ul class="nav nav-list bs-docs-sidenav nav-collapse collapse">
+        <?php foreach($tables as $key=>$item): ?>
+        <li>
+            <a href="/admin/table/show/<?php echo $item->id; ?>"><i class="icon-chevron-right"></i><?php echo $item->name; ?></a>
+        </li>
+        <?php endforeach; ?>
+        
+    </ul>
+</div>

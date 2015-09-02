@@ -1,0 +1,9 @@
+<div class="control-group">
+  <label class="control-label" for="focusedInput"><?php echo $label; ?></label>
+  <div class="controls">
+  	<textarea name="<?php echo $name; ?>" class="<?php if(isset($params['visual_redactor']) && $params['visual_redactor']=='1'): ?> textarea <?php endif; ?>">
+  		<?php echo $value; ?>
+
+  	</textarea>
+  </div>
+</div>

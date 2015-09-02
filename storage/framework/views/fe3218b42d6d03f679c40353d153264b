@@ -1,0 +1,16 @@
+
+<?php if($array): ?>
+<div class="row">
+	<div class="span6">
+		<div class="dataTables_paginate paging_bootstrap pagination">
+			<ul>
+				<li class="prev <?php if($array->currentPage() <= 1): ?> disabled <?php endif; ?>"><a href="?page=<?php echo e($array->currentPage()-1); ?>">← Previous</a></li>
+				<?php for( $i=1; $i<=$countPage; $i++): ?>
+					<li <?php if($i==$array->currentPage()): ?>class="active"<?php endif; ?>><a href="?page=<?php echo e($i); ?>"><?php echo e($i); ?></a></li>
+				<?php endfor; ?>
+				<li class="next <?php if($array->currentPage() == $array->perPage()): ?> disabled <?php endif; ?>"><a href="<?php echo e($array->nextPageUrl()); ?>">Next → </a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<?php endif; ?>

@@ -1,0 +1,10 @@
+<div class="control-group success">
+  <label class="control-label" for="selectError"><?php echo $label; ?></label>
+  <div class="controls">
+    <select id="selectError">
+      <?php foreach($hasModel as $one): ?>
+     	 <option <?php if($selected->name == $one->name): ?> selected <?php endif; ?>><?php echo $one->name; ?></option>
+      <?php endforeach; ?>
+    </select>
+  </div>
+</div>

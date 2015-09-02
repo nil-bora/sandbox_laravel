@@ -1,0 +1,9 @@
+<?php namespace App\Http\Models\Admin;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Cms_parsers extends Model {
+
+	//
+
+}

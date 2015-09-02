@@ -1,0 +1,51 @@
+<?php $__env->startSection('content'); ?>
+<div class="row-fluid">
+    <!-- block -->
+    <div class="block">
+        <div class="navbar navbar-inner block-header">
+            <div class="muted pull-left">Bootstrap dataTables with Toolbar</div>
+        </div>
+        <div class="block-content collapse in">
+            <div class="span12">
+               <div class="table-toolbar">
+                  <div class="btn-group">
+                     <a href="/admin/parsers/add/<?php echo e($id); ?>/"><button class="btn btn-success">Add New <i class="icon-plus icon-white"></i></button></a> 
+                  </div>
+               </div>
+               <br>
+                <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example2">
+                    <thead>
+                        <tr>
+                            <th>Колонка</th>
+                            <th>Название</th>
+                            <th>Парсер</th>
+                            <th>Группа полей</th>
+                            <th>В таблицу</th>
+                            <th>В фильтр</th>
+                            <th>Языковые</th>
+                            <th>Edit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    	<?php foreach($parsers as $one): ?>
+                        <tr class="odd gradeX">
+                            <td><?php echo $one->column; ?></td>
+                            <td><?php echo $one->column_name; ?></td>
+                            <td><?php echo $one->parser; ?></td>
+                            <td class="center"><?php echo $one->column_group; ?></td>
+                            <td class="center"><?php echo $one->show; ?></td>
+                            <td class="center"><?php echo $one->filter; ?></td>
+                            <td class="center"><?php echo $one->multi_lang; ?></td>
+                            <td class="center"><a href="/admin/parsers/edit/<?php echo $one->id; ?>/">edit</a></td>
+                        </tr>
+                        <?php endforeach; ?>
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- /block -->
+</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('admin.layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
